@@ -11,31 +11,43 @@ This is a React project built with Vite, TypeScript, TailwindCSS, and several us
 
 ### 1. Install dependencies
 
+```bash
 npm install
+```
 
-2. Run the development server
-   Start the app in development mode with hot module replacement:
+### 2. Run the development server
 
+Start the app in development mode with hot module replacement:
+
+```bash
 npm run dev
+```
 
 This will start Vite’s development server. Open http://localhost:5173 in your browser to see the app.
 
-3. Build for production
-   To compile the project and build optimized static assets:
+### 3. Build for production
 
+To compile the project and build optimized static assets:
+
+```bash
 npm run build
+```
 
 This runs TypeScript compilation and Vite’s build process.
 
-4. Preview production build
-   After building, you can locally preview the production build with:
+### 4. Preview production build
+
+After building, you can locally preview the production build with:
 
 npm run preview
 
-5. Run linter
-   Check for linting errors in your code with:
+### 5. Run linter
 
+Check for linting errors in your code with:
+
+```bash
 npm run lint
+```
 
 Project Structure
 Uses React 19 with hooks
