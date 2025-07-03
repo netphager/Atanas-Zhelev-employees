@@ -13,18 +13,11 @@ This is a React project built with Vite, TypeScript, TailwindCSS, and several us
 
 npm install
 
-# or
-
-yarn install
-
 2. Run the development server
    Start the app in development mode with hot module replacement:
 
 npm run dev
 
-# or
-
-yarn dev
 This will start Vite’s development server. Open http://localhost:5173 in your browser to see the app.
 
 3. Build for production
@@ -32,9 +25,6 @@ This will start Vite’s development server. Open http://localhost:5173 in your 
 
 npm run build
 
-# or
-
-yarn build
 This runs TypeScript compilation and Vite’s build process.
 
 4. Preview production build
@@ -42,19 +32,11 @@ This runs TypeScript compilation and Vite’s build process.
 
 npm run preview
 
-# or
-
-yarn preview
-This will serve the built files so you can test the production version locally.
-
 5. Run linter
    Check for linting errors in your code with:
 
 npm run lint
 
-# or
-
-yarn lint
 Project Structure
 Uses React 19 with hooks
 
