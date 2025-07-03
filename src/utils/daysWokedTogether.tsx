@@ -1,4 +1,5 @@
 import type { CsvRow } from "../types";
+import { groupByProjectId } from "./groupByProject";
 
 function daysWorkedTogether(emp1: CsvRow, emp2: CsvRow): number {
   if (!emp1.DateTo || !emp2.DateTo) {
@@ -33,4 +34,14 @@ export function getOverlap(data: CsvRow[]) {
   }
 
   return result;
+}
+
+export function mapAndSortData(csvData: CsvRow[]) {
+  const groupedData = groupByProjectId(csvData);
+
+  return Object.entries(groupedData)
+    .flatMap(([, rows]) => {
+      return getOverlap(rows);
+    })
+    .sort((a, b) => b.daysWorkedTogether - a.daysWorkedTogether); // Sort by days worked together in descending order
 }

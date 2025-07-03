@@ -1,8 +1,8 @@
 import Papa from "papaparse";
 import { toast } from "react-toastify";
-import type { CsvRow } from "../types";
 import { validateCsv } from "../utils/validateCSV";
 import { useState, type ChangeEvent } from "react";
+import type { CsvRow } from "../types";
 
 export function useCsvUpload() {
   const [csvData, setCsvData] = useState<CsvRow[] | null>(null);

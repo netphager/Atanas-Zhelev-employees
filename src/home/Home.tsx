@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useCsvUpload } from "../hooks/useCsvUpload";
 import Table from "../table/Table";
 import type { PairWorkRow } from "../types";
-import { groupByProjectId } from "../utils/groupByProject";
-import { getOverlap } from "../utils/daysWokedTogether";
+import { mapAndSortData } from "../utils/daysWokedTogether";
 
 const Home = () => {
   const { csvData, loading, handleFileUpload } = useCsvUpload();
@@ -11,15 +10,7 @@ const Home = () => {
   useEffect(() => {
     if (!csvData) return;
 
-    const groupedData = groupByProjectId(csvData);
-
-    setPairs(
-      Object.entries(groupedData)
-        .flatMap(([, rows]) => {
-          return getOverlap(rows);
-        })
-        .sort((a, b) => b.daysWorkedTogether - a.daysWorkedTogether) // Sort by days worked together in descending order
-    );
+    setPairs(mapAndSortData(csvData));
   }, [csvData]);
 
   const columns = [
