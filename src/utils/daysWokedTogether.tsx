@@ -1,4 +1,4 @@
-import type { CsvRow } from "../type";
+import type { CsvRow } from "../types";
 
 function daysWorkedTogether(emp1: CsvRow, emp2: CsvRow): number {
   if (!emp1.DateTo || !emp2.DateTo) {

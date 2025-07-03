@@ -1,4 +1,4 @@
-import type { CsvRow } from "../type";
+import type { CsvRow } from "../types";
 
 export function groupByProjectId(data: CsvRow[]) {
   return data.reduce<Record<string, CsvRow[]>>((acc, item) => {

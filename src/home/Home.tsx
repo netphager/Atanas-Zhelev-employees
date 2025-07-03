@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCsvUpload } from "../hooks/useCsvUpload";
 import Table from "../table/Table";
-import type { PairWorkRow } from "../type";
+import type { PairWorkRow } from "../types";
 import { groupByProjectId } from "../utils/groupByProject";
 import { getOverlap } from "../utils/daysWokedTogether";
 

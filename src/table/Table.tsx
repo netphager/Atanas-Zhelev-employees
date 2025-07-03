@@ -1,12 +1,4 @@
-type Column<T> = {
-  header: string;
-  accessor: keyof T;
-};
-
-interface TableProps<T> {
-  data: T[];
-  columns: Column<T>[];
-}
+import type { TableProps } from "../types";
 
 function Table<T>({ data, columns }: TableProps<T>) {
   return (

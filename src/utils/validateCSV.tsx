@@ -1,4 +1,4 @@
-import { csvRowSchema, type CsvRow } from "../type";
+import { csvRowSchema, type CsvRow } from "../types";
 
 export const validateCsv = (headers: string[] | undefined, rows: CsvRow[]) => {
   const expectedHeaders = ["EmpID", "ProjectID", "DateFrom", "DateTo"] as const;

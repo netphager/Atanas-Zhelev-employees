@@ -28,3 +28,13 @@ export type PairWorkRow = {
   projectId: string;
   daysWorkedTogether: number;
 };
+
+export type Column<T> = {
+  header: string;
+  accessor: keyof T;
+};
+
+export type TableProps<T> = {
+  data: T[];
+  columns: Column<T>[];
+};
