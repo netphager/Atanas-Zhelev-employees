@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+# pair-employees-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React project built with Vite, TypeScript, TailwindCSS, and several useful libraries like React Toastify and PapaParse.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (version 18 or higher recommended)
+- npm or yarn package manager
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Install dependencies
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# or
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+yarn install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Run the development server
+   Start the app in development mode with hot module replacement:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# or
+
+yarn dev
+This will start Vite’s development server. Open http://localhost:5173 in your browser to see the app.
+
+3. Build for production
+   To compile the project and build optimized static assets:
+
+npm run build
+
+# or
+
+yarn build
+This runs TypeScript compilation and Vite’s build process.
+
+4. Preview production build
+   After building, you can locally preview the production build with:
+
+npm run preview
+
+# or
+
+yarn preview
+This will serve the built files so you can test the production version locally.
+
+5. Run linter
+   Check for linting errors in your code with:
+
+npm run lint
+
+# or
+
+yarn lint
+Project Structure
+Uses React 19 with hooks
+
+Styling via TailwindCSS
+
+Uses Vite as the build and dev server
+
+TypeScript configured via tsconfig.json
+
+ESLint with React hooks rules enabled
+
+Testing libraries included but not covered here (@testing-library/react, vitest)
+
+Dependencies
+@react-formgen/zod for form generation and validation
+
+papaparse for CSV parsing
+
+react-toastify for toast notifications
