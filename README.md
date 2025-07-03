@@ -60,8 +60,6 @@ TypeScript configured via tsconfig.json
 
 ESLint with React hooks rules enabled
 
-Testing libraries included but not covered here (@testing-library/react, vitest)
-
 Dependencies
 @react-formgen/zod for form generation and validation
 
